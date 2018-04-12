@@ -22,14 +22,15 @@
 
 #### GUI
 
+- transmission-qt
+- screenfetch
+- obs-studio
+- geary
+- mpv
 - qutebrowser
+- kdenlive
 - rclone
 - streamlink
-- transmission-qt
-- mpv
-- obs-studio
-- kdenlive
-- screenfetch
 - rawtherapee
 - darktable
 - digikam
@@ -37,10 +38,8 @@
 - ardour
 - lmms
 - tilda
-- rxvt-unicode
 - wine
 - wine-gaming-nine
-- geary
 - flatpak
 - dolphin-plugins
 - kmousetool
@@ -56,8 +55,7 @@
 - telegram-cli-git
 - whistle-git
 - herrie
-- qimgv-git(irfanviewer
-- like)
+- qimgv-git(irfanviewer like)
 - vtop
 
 #### AUR GUI
@@ -125,20 +123,20 @@
 
 ### no choise
 
-    https://www.youtube.com/watch?v=0NOAUogSSMo
+>https://www.youtube.com/watch?v=0NOAUogSSMo
 
     https://github.com/fish-shell/fish-shell
- aur `fish-git`
+>aur `fish-git`
 
 ### alias
 
     ~/.bashrc
     alias alias_name="command_to_run"
 
-alias pac="sudo pacman -S --needed --noconfirm"
-alias aur="aurman -S --needed --noconfirm"
-alias sauron="aurman -S --force --noconfirm --noedit --pgp_fetch --deep_search"
-alias upd='sudo pacman -Syu'
+- alias pac="sudo pacman -S --needed --noconfirm"
+- alias aur="aurman -S --needed --noconfirm"
+- alias sauron="aurman -S --force --noconfirm --noedit --pgp_fetch --deep_search"
+- alias upd='sudo pacman -Syu'
 
 > To remove a package and its dependencies which are not required by any other installed package:
 
@@ -154,10 +152,10 @@ pacman -Syu
 
 ~$ sudo vim visudo
 
-root    ALL=(ALL) ALL
-USER_NAME ALL=(ALL) ALL
-Defaults:USER_NAME      !authenticate
-USER_NAME ALL=NOPASSWD: /bin/mount, /bin/umount
+- root    ALL=(ALL) ALL
+- USER_NAME ALL=(ALL) ALL
+- Defaults:USER_NAME      !authenticate
+- USER_NAME ALL=NOPASSWD: /bin/mount, /bin/umount
 
 ### Ligatures
 
@@ -167,35 +165,27 @@ USER_NAME ALL=NOPASSWD: /bin/mount, /bin/umount
 
 ## soft
 
-### emacs
-
-adobe-source-code-pro-fonts
-`git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d`
-
-[challenger-deep](https://challenger-deep-theme.github.io/)
-
 ### vim
 
 [oceanic-next](https://github.com/mhartington/oceanic-next)
+
 [onedark](https://github.com/joshdick/onedark.vim)
 
 ### qtile
 
-    https://www.one-tab.com/page/MU0WW2juTt2zUTvnNd17OA
-
-    https://krusader.org/
-    http://sunflower-fm.org/
-    https://inigo.katxi.org/devel/lfm/
+- https://www.one-tab.com/page/MU0WW2juTt2zUTvnNd17OA
+- https://krusader.org/
+- http://sunflower-fm.org/
+- https://inigo.katxi.org/devel/lfm/
 
 #### keys
 
-Telegram  /Telegram -startintray
-Steam  /usr/bin/steam %U -silent
-Transmission /usr/bin/transmission-gtk --minimized
-Kshare `--background`
+- Telegram  /Telegram -startintray
+- Steam  /usr/bin/steam %U -silent
+- Transmission /usr/bin/transmission-gtk --minimized
+- Kshare `--background`
 
 ## settings
-
 
 ### github
 
@@ -213,10 +203,15 @@ Copies the contents of the id_rsa.pub file to your clipboard
 ### DPI
 
 bc
-1920/(47.7/2.54)
-    106
-1080/(26.8/2.54)
-    108
+
+>1920/(47.7/2.54)
+>
+>106
+>
+>1080/(26.8/2.54)
+>
+>108
+
 
 > Note: While you can set any dpi you like and applications using Qt and GTK will scale accordingly, it's recommended to set it to 96, 120 (25% higher), 144 (50% higher), 168 (75% higher), 192 (100% higher) etc., to reduce scaling artifacts to GUI that use bitmaps. Reducing it below 96 dpi may not reduce size of graphical elements of GUI as typically the lowest dpi the icons are made for is 96.
 `
@@ -254,5 +249,5 @@ xprop
 
 #### AUR Wayland
 
-[firefox-wayland](https://aur.archlinux.org/pkgbase/firefox-wayland/)
-[firefox-wayland-hg](https://aur.archlinux.org/pkgbase/firefox-wayland-hg/)
+- [firefox-wayland](https://aur.archlinux.org/pkgbase/firefox-wayland/)
+- [firefox-wayland-hg](https://aur.archlinux.org/pkgbase/firefox-wayland-hg/)
