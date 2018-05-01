@@ -22,11 +22,28 @@
 
 #### GUI
 
+>installed
 - transmission-qt
 - screenfetch
 - obs-studio
 - geary
 - mpv
+- dolphin-plugins
+- kdegraphics-thumbnailers
+- kimageformats
+- kdesdk-thumbnailers
+- ffmpegthumbs
+- raw-thumbnailer
+- taglib
+- rofi
+
+> AUR
+- kde-thumbnailer-apk
+- kde-thumbnailer-blender
+- kde-thumbnailer-epub
+
+>optional
+
 - qutebrowser
 - kdenlive
 - rclone
@@ -41,7 +58,6 @@
 - wine
 - wine-gaming-nine
 - flatpak
-- dolphin-plugins
 - kmousetool
 - minuet
 - kdegames
@@ -60,38 +76,39 @@
 
 #### AUR GUI
 
+>installed AUR
 - firefox-developer-edition-i18n-en-us
 - visual-studio-code-bin
 - blender-git
 - abricotine
 - typora
-- kshare
+- onedrive-git (CLI)
+- inkscape-git
 
+>install AUR
+- vim
+- vim-plugins
+- pkgbrowser
+- dropbox
+- grub-customizer
+
+>opt
 - discord
 - skypeforlinux-stable-bin
 - slack-desktop
 - activitywatch-bin
-
-- pkgbrowser
-- vim
-- vim-plugins
 - google-chrome
 - vivaldi
-- dropbox
-- onedrive-git
 - yandex-disk
 - telegram-desktop-bin
 - vocal
 - teamviewer
 - evince-no-gnome
-- grub-customizer
 - shufti
-- gimp-devel
 - mockingbot
 - yed
 - kaku-bin
 - bitwig-studio
-- inkscape-git
 - plasma5-applets-kde-arch-update-notifier-git
 - cpu-x-git
 
@@ -100,7 +117,6 @@
     sup(блядовые рубя ирорят)
     yandex-disk-indicator (погодить)
     fbv fim jfbview fbida(too old way)
-    kde-thumbnailer-blender
     **tomahawk**
     Alacritty
     KBackup
@@ -149,13 +165,17 @@ pacman -Syu
 ### sudo
 
 ~$ sudo EDITOR=nano visudo
+~$ sudo EDITOR=vim visudo
 
 ~$ sudo vim visudo
 
 - root    ALL=(ALL) ALL
-- USER_NAME ALL=(ALL) ALL
+>uncommen wheel group
 - Defaults:USER_NAME      !authenticate
 - USER_NAME ALL=NOPASSWD: /bin/mount, /bin/umount
+
+>to get accese
+sudo chmod -R a+rwx /usr
 
 ### Ligatures
 
@@ -183,7 +203,6 @@ pacman -Syu
 - Telegram  /Telegram -startintray
 - Steam  /usr/bin/steam %U -silent
 - Transmission /usr/bin/transmission-gtk --minimized
-- Kshare `--background`
 
 ## settings
 
