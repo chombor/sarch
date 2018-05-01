@@ -23,7 +23,7 @@
 #### GUI
 
 >installed
-- transmission-qt
+
 - screenfetch
 - obs-studio
 - geary
@@ -38,10 +38,6 @@
 - rofi
 
 > AUR
-- kde-thumbnailer-apk
-- kde-thumbnailer-blender
-- kde-thumbnailer-epub
-
 >optional
 
 - qutebrowser
@@ -63,6 +59,7 @@
 - kdegames
 - nomacs (good alternative for qimgv with more func)
 
+
 ### AUR
 
 #### AUR CLI
@@ -71,15 +68,17 @@
 - telegram-cli-git
 - whistle-git
 - herrie
-- qimgv-git(irfanviewer like)
+- qimgv(irfanviewer like)
 - vtop
-
+community/hub 2.2.9-2
+    cli interface for Github
+Список установленных пакетов  pacman -Qe
 #### AUR GUI
 
 >installed AUR
 - firefox-developer-edition-i18n-en-us
 - visual-studio-code-bin
-- blender-git
+
 - abricotine
 - typora
 - onedrive-git (CLI)
@@ -87,7 +86,7 @@
 
 >install AUR
 - vim
-- vim-plugins
+
 - pkgbrowser
 - dropbox
 - grub-customizer
@@ -174,6 +173,11 @@ pacman -Syu
 - Defaults:USER_NAME      !authenticate
 - USER_NAME ALL=NOPASSWD: /bin/mount, /bin/umount
 
+
+Defaults:chibo      !authenticate
+chibo ALL=NOPASSWD: /bin/mount, /bin/umount
+
+
 >to get accese
 sudo chmod -R a+rwx /usr
 
@@ -214,7 +218,7 @@ sudo chmod -R a+rwx /usr
     git config --global user.email "EMAIL"
     ssh-keygen -t rsa -b 4096 -C "EMAIL"
 
-`pac xclip`
+`pac openssh xclip`
 
 Copies the contents of the id_rsa.pub file to your clipboard
 `xclip -sel clip < ~/.ssh/id_rsa.pub`
@@ -270,3 +274,94 @@ xprop
 
 - [firefox-wayland](https://aur.archlinux.org/pkgbase/firefox-wayland/)
 - [firefox-wayland-hg](https://aur.archlinux.org/pkgbase/firefox-wayland-hg/)
+
+
+
+# linux notepad
+## pac is default
+Spectacle
+
+sudo pip install --upgrade pip
+pip install numpy
+
+
+
+
+plasma5-applets-kde-arch-update-notifier-git
+
+
+unrar
+
+locale
+locale-gen
+
+
+
+It's enough if you add it to your ~/.bashrc:
+
+export LANG=en_US.UTF-8
+export LC_MESSAGES="C"
+
+and reboot.
+
+
+aur glxgears
+
+
+sudo chmod -R a+rwx /usr
+
+chmod -R o-rx /usr
+chown root:root /usr
+chmod 4755 /usr
+
+
+
+
+
+
+
+
+
+https://wiki.archlinux.org/index.php/ATI
+pac partitionmanager xdotool
+
+file:///run/media/manjaro/bc4f3eff-f979-4323-8a26-5bf84943ec2c/etc/pacman.conf
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+
+/etc/makepkg.conf
+MAKEFLAGS="-j$(nproc)"
+
+
+file:///run/media/manjaro/bc4f3eff-f979-4323-8a26-5bf84943ec2c/etc/locale.conf
+LANG=en_US.UTF-8
+LC_COLLATE=C
+LC_MESSAGES=C
+
+
+file:///run/media/manjaro/bc4f3eff-f979-4323-8a26-5bf84943ec2c/etc/bash.bashrc
+#
+# /etc/bash.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+[[ $DISPLAY ]] && shopt -s checkwinsize
+
+PS1='[\u@\h \W]\$ '
+
+case ${TERM} in
+  xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
+    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+
+    ;;
+  screen*)
+    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+    ;;
+esac
+
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+source /etc/profile.d/ps1.sh
+
